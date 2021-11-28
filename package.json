@@ -1,0 +1,30 @@
+{
+  "name": "token-math",
+  "description": "Library to do ERC-20 arithmetic.",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanburrell/token-math"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest test/*",
+    "lint": "npx prettier --write .",
+    "doc": "jsdoc -d docs src/index.ts"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.4",
+    "jest": "^27.0.5",
+    "prettier": "2.4.1",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.0.1",
+    "jsdoc": "^3.6.7"
+  }
+}
