@@ -2,7 +2,8 @@
   "name": "token-math",
   "description": "Library to do ERC-20 arithmetic.",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,7 +13,12 @@
     "build": "tsc",
     "test": "jest test/*",
     "lint": "npx prettier --write .",
-    "doc": "jsdoc -d docs src/index.ts"
+    "doc": "jsdoc -d docs src/index.ts",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version" : "yarn lint && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",
